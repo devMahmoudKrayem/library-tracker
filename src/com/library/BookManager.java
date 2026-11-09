@@ -47,7 +47,10 @@ public class BookManager {
     }
 
 
+
     public void listBooks() {
+
+        System.out.println("\nTotal Books: " + books.size());
 
         if (books.isEmpty()) {
             System.out.println("No books found.");
