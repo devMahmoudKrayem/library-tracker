@@ -1,0 +1,14 @@
+
+# Environment files
+.env
+
+# Python cache (required by assignment)
+__pycache__/
+
+# Java compiled files
+*.class
+out/
+
+# IntelliJ IDEA
+.idea/
+*.iml
