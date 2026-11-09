@@ -22,6 +22,7 @@ A simple Java console application for managing library books.
 
 - Mahmoud Abu Karim
 - Ahmed Al-Shoubaki
-
+    الطالب: محمود ناصر سليمان أبو كريم 120220397
+    الطالب احمد عبدالعال امين الشوبكي 120221017
 Recovery Drill 4: Local change before remote update.
 Recovery Drill 4: Remote change made by another contributor.
