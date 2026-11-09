@@ -115,7 +115,8 @@ public class Main {
 
     public static void printBanner() {
         System.out.println("================================");
-        System.out.println("        LIBRARY TRACKER");
+        System.out.println("          BOOK MANAGEMENT");
+        System.out.println("          MANAGED BY AHMED");
         System.out.println("================================");
     }
 }
