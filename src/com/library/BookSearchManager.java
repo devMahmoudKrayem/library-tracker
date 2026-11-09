@@ -2,6 +2,7 @@
 package com.library;
 
 import java.util.List;
+import java.util.Locale;
 
 public class BookSearchManager {
 
@@ -22,8 +23,8 @@ public class BookSearchManager {
 
         for (Book book : books) {
 
-            if (book.getTitle().toLowerCase()
-                    .contains(title.trim().toLowerCase())) {
+            if (book.getTitle().toLowerCase(Locale.ROOT)
+                    .contains(title.trim().toLowerCase(Locale.ROOT))) {
 
                 System.out.println(book);
                 found = true;
@@ -46,8 +47,8 @@ public class BookSearchManager {
 
         for (Book book : books) {
 
-            if (book.getAuthor().toLowerCase()
-                    .contains(author.trim().toLowerCase())) {
+            if (book.getAuthor().toLowerCase(Locale.ROOT)
+                    .contains(author.trim().toLowerCase(Locale.ROOT))) {
 
                 System.out.println(book);
                 found = true;
