@@ -37,12 +37,17 @@ public class BookSearchManager {
 
     public void searchByAuthor(String author) {
 
+        if (author == null || author.isBlank()) {
+            System.out.println("Please enter an author name!");
+            return;
+        }
+
         boolean found = false;
 
         for (Book book : books) {
 
             if (book.getAuthor().toLowerCase()
-                    .contains(author.toLowerCase())) {
+                    .contains(author.trim().toLowerCase())) {
 
                 System.out.println(book);
                 found = true;
