@@ -2,6 +2,7 @@
 package com.library;
 
 import java.util.List;
+import java.util.Locale;
 
 public class BookSearchManager {
 
@@ -13,12 +14,17 @@ public class BookSearchManager {
 
     public void searchByTitle(String title) {
 
+        if (title == null || title.isBlank()) {
+            System.out.println("Please enter a book title!");
+            return;
+        }
+
         boolean found = false;
 
         for (Book book : books) {
 
-            if (book.getTitle().toLowerCase()
-                    .contains(title.toLowerCase())) {
+            if (book.getTitle().toLowerCase(Locale.ROOT)
+                    .contains(title.trim().toLowerCase(Locale.ROOT))) {
 
                 System.out.println(book);
                 found = true;
@@ -32,12 +38,17 @@ public class BookSearchManager {
 
     public void searchByAuthor(String author) {
 
+        if (author == null || author.isBlank()) {
+            System.out.println("Please enter an author name!");
+            return;
+        }
+
         boolean found = false;
 
         for (Book book : books) {
 
-            if (book.getAuthor().toLowerCase()
-                    .contains(author.toLowerCase())) {
+            if (book.getAuthor().toLowerCase(Locale.ROOT)
+                    .contains(author.trim().toLowerCase(Locale.ROOT))) {
 
                 System.out.println(book);
                 found = true;

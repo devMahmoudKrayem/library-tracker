@@ -79,6 +79,11 @@ public class BookManager {
 
     public void removeBook(int id) {
 
+        if (id <= 0) {
+            System.out.println("Please enter a valid book ID!");
+            return;
+        }
+
         boolean removed = books.removeIf(book -> book.getId() == id);
 
         if (removed) {
@@ -87,8 +92,7 @@ public class BookManager {
         } else {
             System.out.println("Book not found!");
         }
-    }
-    public List<Book> getBooks() {
+    }    public List<Book> getBooks() {
         return books;
     }
 }
