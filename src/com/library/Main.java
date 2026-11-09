@@ -48,11 +48,7 @@ public class Main {
                     System.out.print("Enter author name: ");
                     String author = scanner.nextLine();
 
-                    if (title.isBlank() || author.isBlank()) {
-                        System.out.println("Title and author cannot be empty!");
-                    } else {
-                        bookManager.addBook(title, author);
-                    }
+                    bookManager.addBook(title, author);
                     break;
 
                 case 2:

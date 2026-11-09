@@ -19,10 +19,13 @@ public class BookManager {
 
     public void addBook(String title, String author) {
 
-        if (title == null || title.isBlank()
-                || author == null || author.isBlank()) {
+        if (title == null || title.isBlank()) {
+            System.out.println("Book title is required!");
+            return;
+        }
 
-            System.out.println("Title and author cannot be empty!");
+        if (author == null || author.isBlank()) {
+            System.out.println("Book author is required!");
             return;
         }
 
