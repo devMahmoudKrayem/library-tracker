@@ -28,6 +28,14 @@ public class BookManager {
 
         title = title.trim();
         author = author.trim();
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)
+                    && book.getAuthor().equalsIgnoreCase(author)) {
+
+                System.out.println("This book already exists!");
+                return;
+            }
+        }
 
         int newId = 1;
 
