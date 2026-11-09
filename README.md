@@ -24,3 +24,4 @@ A simple Java console application for managing library books.
 - Ahmed Al-Shoubaki
 
 Recovery Drill 4: Local change before remote update.
+Recovery Drill 4: Remote change made by another contributor.
