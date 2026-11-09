@@ -16,7 +16,29 @@ public class BookManager {
         books = storage.loadBooks();
     }
 
+
     public void addBook(String title, String author) {
+
+        if (title == null || title.isBlank()) {
+            System.out.println("Book title is required!");
+            return;
+        }
+
+        if (author == null || author.isBlank()) {
+            System.out.println("Book author is required!");
+            return;
+        }
+
+        title = title.trim();
+        author = author.trim();
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)
+                    && book.getAuthor().equalsIgnoreCase(author)) {
+
+                System.out.println("This book already exists!");
+                return;
+            }
+        }
 
         int newId = 1;
 
@@ -35,7 +57,11 @@ public class BookManager {
         System.out.println("Book added successfully!");
     }
 
+
+
     public void listBooks() {
+
+        System.out.println("\nTotal Books: " + books.size());
 
         if (books.isEmpty()) {
             System.out.println("No books found.");
