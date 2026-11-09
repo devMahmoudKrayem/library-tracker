@@ -16,7 +16,18 @@ public class BookManager {
         books = storage.loadBooks();
     }
 
+
     public void addBook(String title, String author) {
+
+        if (title == null || title.isBlank()
+                || author == null || author.isBlank()) {
+
+            System.out.println("Title and author cannot be empty!");
+            return;
+        }
+
+        title = title.trim();
+        author = author.trim();
 
         int newId = 1;
 
@@ -34,6 +45,7 @@ public class BookManager {
 
         System.out.println("Book added successfully!");
     }
+
 
     public void listBooks() {
 
